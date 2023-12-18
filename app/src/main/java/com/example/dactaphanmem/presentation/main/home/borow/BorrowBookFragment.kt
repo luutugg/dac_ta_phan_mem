@@ -11,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.dactaphanmem.R
 import com.example.dactaphanmem.common.BaseFragment
+import com.example.dactaphanmem.common.OnDeleteBook
 import com.example.dactaphanmem.common.OnUpdateBook
 import com.example.dactaphanmem.common.eventbus.EventBusManager
 import com.example.dactaphanmem.common.getAppString
@@ -98,7 +99,11 @@ class BorrowBookFragment : BaseFragment<BorrowBookFragmentBinding>() {
                     if (it == true) {
                         val bookCallBack = book?.copy()
                         bookCallBack?.bookCount = (book?.bookCount?:0) - binding.edtBorrowCount.text.toString().toInt()
-                        EventBusManager.instance?.postPending(OnUpdateBook(bookCallBack))
+                        if (bookCallBack?.bookCount == 0){
+                            EventBusManager.instance?.postPending(OnDeleteBook(bookCallBack?.bookId))
+                        }else{
+                            EventBusManager.instance?.postPending(OnUpdateBook(bookCallBack))
+                        }
                         Toast.makeText(requireContext(), "Mượn thành công", Toast.LENGTH_SHORT).show()
                         requireActivity().supportFragmentManager.popBackStack()
                     }

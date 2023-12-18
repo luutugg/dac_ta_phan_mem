@@ -11,6 +11,8 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dactaphanmem.R
 import com.example.dactaphanmem.common.BaseFragment
+import com.example.dactaphanmem.common.OnDeleteBook
+import com.example.dactaphanmem.common.OnInsertBook
 import com.example.dactaphanmem.common.OnUpdateBook
 import com.example.dactaphanmem.common.ResolveViolate
 import com.example.dactaphanmem.common.eventbus.EventBusManager
@@ -21,7 +23,7 @@ import com.example.dactaphanmem.databinding.HomeFragmentBinding
 import com.example.dactaphanmem.presentation.main.home.borow.BorrowBookFragment
 import com.example.dactaphanmem.presentation.main.home.moreaction.MoreFragment
 import com.example.dactaphanmem.presentation.main.home.warning.WarningFragment
-import com.example.dactaphanmem.presentation.update.UpdateActivity
+import com.example.dactaphanmem.presentation.managerbook.ManagerBookActivity
 import kotlinx.coroutines.launch
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -52,6 +54,20 @@ class HomeFragment : BaseFragment<HomeFragmentBinding>(), IEventHandler {
             is OnUpdateBook -> {
                 if (event.book != null) {
                     viewModel.onUpdateBook(book = event.book)
+                }
+                EventBusManager.instance?.removeSticky(event)
+            }
+
+            is OnInsertBook -> {
+                if (event.book != null) {
+                    viewModel.onInsertBook(book = event.book)
+                }
+                EventBusManager.instance?.removeSticky(event)
+            }
+
+            is OnDeleteBook -> {
+                if (event.bookId != null) {
+                    viewModel.deleteBook(event.bookId)
                 }
                 EventBusManager.instance?.removeSticky(event)
             }
@@ -122,8 +138,8 @@ class HomeFragment : BaseFragment<HomeFragmentBinding>(), IEventHandler {
 
                 fragment.listener = object : MoreFragment.IMoreListener {
                     override fun onUpdate() {
-                        val intent = Intent(requireContext(), UpdateActivity::class.java)
-                        intent.putExtras(bundleOf(UpdateActivity.BOOK_KEY to book))
+                        val intent = Intent(requireContext(), ManagerBookActivity::class.java)
+                        intent.putExtras(bundleOf(ManagerBookActivity.BOOK_KEY to book))
                         startActivity(intent)
                     }
 

@@ -14,7 +14,7 @@
         android:theme="@style/Theme.DacTaPhanMem"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.update.UpdateActivity"
+            android:name=".presentation.managerbook.ManagerBookActivity"
             android:exported="false" />
         <activity
             android:name=".presentation.history.HistoryActivity"

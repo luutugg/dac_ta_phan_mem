@@ -55,5 +55,6 @@
     <string name="book_author_info">Tên tác giả…</string>
     <string name="book_year_info">Năm sản xuất…</string>
     <string name="book_count_info">Số lượng…</string>
+    <string name="add_book_title">Thêm sách</string>
 
 </resources>

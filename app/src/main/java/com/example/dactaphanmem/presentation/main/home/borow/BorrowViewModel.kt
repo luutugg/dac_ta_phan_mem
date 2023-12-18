@@ -28,36 +28,25 @@ class BorrowViewModel : ViewModel() {
 
     fun borrowBook(book: Book, count: Int) {
         viewModelScope.launch(Dispatchers.IO) {
-            var time = 0
+            var time = 1
+            var oldCount = 0
             if (database.getMyBookDao().checkBookExist(book.bookId) != null) {
                 // add my book
                 time = database.getMyBookDao().checkBookExist(book.bookId)!!.myBookNumberOder!! + 1
-                database.getMyBookDao().insertMyBook(
-                    MyBook(
-                        myBookId = UUID.randomUUID().toString(),
-                        myBookName = book.bookName,
-                        myBookCount = count,
-                        myBookYear = book.bookYear,
-                        myBookAuthor = book.bookAuthor,
-                        myBookDateGiveBack = TimeUtils.convertTimeDactaToDDMMYY(Calendar.getInstance().time),
-                        userInfoBookId = AppPreferences.userInfo!!.userId,
-                        myBookNumberOder = time
-                    )
-                )
-            } else {
-                time = 1
-                database.getMyBookDao().insertMyBook(
-                    MyBook(
-                        myBookId = UUID.randomUUID().toString(),
-                        myBookName = book.bookName,
-                        myBookCount = count,
-                        myBookYear = book.bookYear,
-                        myBookDateGiveBack = TimeUtils.convertTimeDactaToDDMMYY(Calendar.getInstance().time),
-                        userInfoBookId = AppPreferences.userInfo!!.userId,
-                        myBookNumberOder = time
-                    )
-                )
+                oldCount = database.getMyBookDao().checkBookExist(book.bookId)!!.myBookCount ?: 0
             }
+            database.getMyBookDao().insertMyBook(
+                MyBook(
+                    myBookId = book.bookId,
+                    myBookName = book.bookName,
+                    myBookCount = count + oldCount,
+                    myBookYear = book.bookYear,
+                    myBookAuthor = book.bookAuthor,
+                    myBookDateGiveBack = TimeUtils.convertTimeDactaToDDMMYY(Calendar.getInstance().time),
+                    userInfoBookId = AppPreferences.userInfo!!.userId,
+                    myBookNumberOder = time
+                )
+            )
 
             // xóa sách khỏi thư viện
             if (count == book.bookCount) {

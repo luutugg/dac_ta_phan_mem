@@ -16,6 +16,7 @@ import com.example.dactaphanmem.databinding.ProfileFragmentBinding
 import com.example.dactaphanmem.presentation.AppPreferences
 import com.example.dactaphanmem.presentation.borrow.BorrowActivity
 import com.example.dactaphanmem.presentation.history.HistoryActivity
+import com.example.dactaphanmem.presentation.managerbook.ManagerBookActivity
 import com.example.dactaphanmem.presentation.signin.SignInActivity
 import com.example.dactaphanmem.presentation.violate.ViolateActivity
 
@@ -55,6 +56,12 @@ class ProfileFragment : BaseFragment<ProfileFragmentBinding>() {
         binding.tvProfileHistory.setOnSafeClick {
             startActivity(Intent(requireContext(), HistoryActivity::class.java))
         }
+
+        binding.tvProfileAddBook.setOnSafeClick {
+            val intent = Intent(requireContext(), ManagerBookActivity::class.java)
+            intent.putExtra(ManagerBookActivity.BOOK_ADD_KEY, true)
+            startActivity(intent)
+        }
     }
 
     private fun fillDataUser() {
@@ -73,10 +80,12 @@ class ProfileFragment : BaseFragment<ProfileFragmentBinding>() {
             binding.tvProfileBookBorrowed.show()
             binding.tvProfileViolate.show()
             binding.tvProfileHistory.gone()
+            binding.tvProfileAddBook.gone()
         } else {
             binding.tvProfileBookBorrowed.gone()
             binding.tvProfileViolate.gone()
             binding.tvProfileHistory.show()
+            binding.tvProfileAddBook.show()
         }
     }
 }

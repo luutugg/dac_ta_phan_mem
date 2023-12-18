@@ -161,6 +161,25 @@
         android:textSize="14sp" />
 
     <TextView
+        android:id="@+id/tvProfileAddBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_bg_gray_corner_4"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:fontFamily="@font/fbase_font_regular"
+        android:foreground="?selectableItemBackground"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="@string/add_book_title"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
         android:id="@+id/tvProfileViolate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -41,6 +41,15 @@ class HomeViewModel : ViewModel() {
         }
     }
 
+
+    fun onInsertBook(book: Book) {
+        viewModelScope.launch(Dispatchers.IO) {
+            val list = _bookState.value?.toMutableList()
+            list?.add(book)
+            _bookState.value = list
+        }
+    }
+
     fun checkViolate(): Boolean {
         val listData = database.getUserDao().getMyBookViolateList().myBookViolateList?.filter { v ->
             v.myBook.myBookDateGiveBack != null && TimeUtils.checkGreaterTime(v.myBook.myBookDateGiveBack!!)
