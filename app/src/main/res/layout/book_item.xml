@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/shape_bg_white_corner_8">
+
+    <TextView
+        android:id="@+id/tvBookName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/fbase_font_regular"
+        android:maxLines="1"
+        android:textColor="@color/neutral_2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/flBookFrame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Tên sách: Lập trình Android" />
+
+    <TextView
+        android:id="@+id/tvBookAuthor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/fbase_font_regular"
+        android:maxLines="1"
+        android:textColor="@color/neutral_2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/glBookV7"
+        app:layout_constraintStart_toStartOf="@id/tvBookName"
+        app:layout_constraintTop_toBottomOf="@id/tvBookName"
+        tools:text="Tên tác giả: Lưu Văn Tùng" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glBookV7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <TextView
+        android:id="@+id/tvBookYear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/fbase_font_regular"
+        android:maxLines="1"
+        android:textSize="14sp"
+        android:textColor="@color/neutral_2"
+        app:layout_constraintEnd_toEndOf="@id/glBookV7"
+        app:layout_constraintStart_toStartOf="@id/tvBookAuthor"
+        app:layout_constraintTop_toBottomOf="@id/tvBookAuthor"
+        tools:text="Năm sản xuất: 2019" />
+
+    <TextView
+        android:id="@+id/tvBookCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="10dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/fbase_font_regular"
+        android:maxLines="1"
+        android:textSize="14sp"
+        android:textColor="@color/neutral_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/glBookV7"
+        app:layout_constraintStart_toStartOf="@id/tvBookAuthor"
+        app:layout_constraintTop_toBottomOf="@id/tvBookYear"
+        tools:text="Số lượng: 10" />
+
+    <FrameLayout
+        android:id="@+id/flBookFrame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <FrameLayout
+            android:id="@+id/flBookMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            android:foreground="?selectableItemBackground"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_more"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/flBookAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:foreground="?selectableItemBackground"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_add_book"/>
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

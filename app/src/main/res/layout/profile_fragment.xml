@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.main.profile.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_bg_gray_corner_4">
+
+        <TextView
+            android:id="@+id/tvProfileNameInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/fbase_font_bold"
+            android:text="@string/name_info_title"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/fbase_font_medium"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvProfileNameInfo"
+            app:layout_constraintStart_toEndOf="@id/tvProfileNameInfo"
+            app:layout_constraintTop_toTopOf="@id/tvProfileNameInfo"
+            tools:text="Lưu Văn Tùng" />
+
+        <TextView
+            android:id="@+id/tvProfilePhoneInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/fbase_font_bold"
+            android:text="@string/phone_info_title"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvProfileNameInfo" />
+
+        <TextView
+            android:id="@+id/tvProfilePhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/fbase_font_medium"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvProfilePhoneInfo"
+            app:layout_constraintStart_toEndOf="@id/tvProfilePhoneInfo"
+            app:layout_constraintTop_toTopOf="@id/tvProfilePhoneInfo"
+            tools:text="0364572864" />
+
+        <TextView
+            android:id="@+id/tvProfileGradeInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/fbase_font_bold"
+            android:text="@string/grade_info"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvProfilePhoneInfo" />
+
+        <TextView
+            android:id="@+id/tvProfileGrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/fbase_font_medium"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvProfileGradeInfo"
+            app:layout_constraintStart_toEndOf="@id/tvProfileGradeInfo"
+            app:layout_constraintTop_toTopOf="@id/tvProfileGradeInfo"
+            tools:text="CNTTK61" />
+
+        <TextView
+            android:id="@+id/tvProfileAccountTypeInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/fbase_font_bold"
+            android:text="@string/account_type_info"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvProfileGradeInfo" />
+
+        <TextView
+            android:id="@+id/tvProfileAccountType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/fbase_font_medium"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvProfileAccountTypeInfo"
+            app:layout_constraintStart_toEndOf="@id/tvProfileAccountTypeInfo"
+            app:layout_constraintTop_toTopOf="@id/tvProfileAccountTypeInfo"
+            tools:text="Sinh viên" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvProfileBookBorrowed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_bg_gray_corner_4"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:fontFamily="@font/fbase_font_regular"
+        android:foreground="?selectableItemBackground"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="@string/book_borrow_title"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvProfileHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_bg_gray_corner_4"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:fontFamily="@font/fbase_font_regular"
+        android:foreground="?selectableItemBackground"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="@string/history_title"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvProfileViolate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_bg_gray_corner_4"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:fontFamily="@font/fbase_font_regular"
+        android:foreground="?selectableItemBackground"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="@string/violate_title"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvProfileLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_bg_gray_corner_4"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/fbase_font_regular"
+        android:foreground="?selectableItemBackground"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="@string/logout_title"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

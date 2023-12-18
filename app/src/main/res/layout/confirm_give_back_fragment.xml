@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/black_overlay">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/shape_bg_white_corner_8">
+
+        <TextView
+            android:id="@+id/tvConfirmGiveBackTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/fbase_font_bold"
+            android:text="@string/book_info_title"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvConfirmGiveBackName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/fbase_font_regular"
+            android:maxLines="1"
+            android:textColor="@color/neutral_2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvConfirmGiveBackTitle"
+            tools:text="Tên sách: Lập trình Android" />
+
+        <TextView
+            android:id="@+id/tvConfirmGiveBackAuthor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/fbase_font_regular"
+            android:maxLines="1"
+            android:textColor="@color/neutral_2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/glBookV7"
+            app:layout_constraintStart_toStartOf="@id/tvConfirmGiveBackName"
+            app:layout_constraintTop_toBottomOf="@id/tvConfirmGiveBackName"
+            tools:text="Tên tác giả: Lưu Văn Tùng" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glBookV7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <TextView
+            android:id="@+id/tvConfirmGiveBackYear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/fbase_font_regular"
+            android:maxLines="1"
+            android:textColor="@color/neutral_2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/glBookV7"
+            app:layout_constraintStart_toStartOf="@id/tvConfirmGiveBackAuthor"
+            app:layout_constraintTop_toBottomOf="@id/tvConfirmGiveBackAuthor"
+            tools:text="Năm sản xuất: 2019" />
+
+        <TextView
+            android:id="@+id/tvConfirmGiveBackDateConfirmGiveBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="10dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/fbase_font_regular"
+            android:maxLines="1"
+            android:textColor="@color/neutral_2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/glBookV7"
+            app:layout_constraintStart_toStartOf="@id/tvConfirmGiveBackYear"
+            app:layout_constraintTop_toBottomOf="@id/tvConfirmGiveBackYear"
+            tools:text="Quá thời gian: 2 ngày" />
+
+        <TextView
+            android:id="@+id/tvConfirmGiveBackCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="10dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/fbase_font_regular"
+            android:maxLines="1"
+            android:text="@string/count_borrow_title"
+            android:textColor="@color/neutral_2"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/tvConfirmGiveBackDateConfirmGiveBack"
+            app:layout_constraintTop_toBottomOf="@id/tvConfirmGiveBackDateConfirmGiveBack" />
+
+        <EditText
+            android:id="@+id/edtConfirmGiveBackCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="1dp"
+            android:background="@null"
+            android:fontFamily="@font/fbase_font_regular"
+            android:hint="@string/count_default"
+            android:inputType="number"
+            android:maxLength="100"
+            android:textColor="@color/neutral_2"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvConfirmGiveBackCount"
+            app:layout_constraintEnd_toStartOf="@+id/glBookV7"
+            app:layout_constraintStart_toEndOf="@id/tvConfirmGiveBackCount"
+            app:layout_constraintTop_toTopOf="@id/tvConfirmGiveBackCount" />
+
+        <View
+            android:id="@+id/vConfirmGiveBackDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtConfirmGiveBackCount" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vConfirmGiveBackDivider">
+
+            <TextView
+                android:id="@+id/tvConfirmGiveBackCancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                android:fontFamily="@font/fbase_font_regular"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/cancel_title"
+                android:textColor="@color/neutral_2"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/tvConfirmGiveBack"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/fbase_font_regular"
+                android:gravity="center"
+                android:maxLines="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                android:text="@string/give_back"
+                android:textColor="@color/neutral_2"
+                android:textSize="14sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

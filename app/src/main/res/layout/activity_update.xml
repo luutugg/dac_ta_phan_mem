@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.update.UpdateActivity">
+    
+    <FrameLayout
+        android:id="@+id/flUpdateBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackground"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_back" />
+
+    </FrameLayout>
+    
+    <TextView
+        android:id="@+id/tvUpdateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fbase_font_bold"
+        android:text="@string/update_book"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/flUpdateBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtUpdateBookName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_bg_gray_corner_4"
+            android:fontFamily="@font/fbase_font_medium"
+            android:hint="@string/book_name_info"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:textColor="@color/black68"
+            android:textColorHint="@color/black68"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtUpdateBookAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_bg_gray_corner_4"
+            android:fontFamily="@font/fbase_font_medium"
+            android:hint="@string/book_author_info"
+            android:padding="10dp"
+            android:textColor="@color/black68"
+            android:textColorHint="@color/black68"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtUpdateBookYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_bg_gray_corner_4"
+            android:fontFamily="@font/fbase_font_medium"
+            android:hint="@string/book_year_info"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textColor="@color/black68"
+            android:textColorHint="@color/black68"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtUpdateBookCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_bg_gray_corner_4"
+            android:fontFamily="@font/fbase_font_medium"
+            android:hint="@string/book_count_info"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:inputType="number"
+            android:textColor="@color/black68"
+            android:textColorHint="@color/black68"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/shape_bg_blue_corner_8"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center"
+            android:paddingHorizontal="50dp"
+            android:paddingVertical="8dp"
+            android:text="@string/update"
+            android:textColor="@color/white" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

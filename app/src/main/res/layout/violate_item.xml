@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/shape_bg_white_corner_8">
+
+    <TextView
+        android:id="@+id/tvViolateName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/fbase_font_regular"
+        android:maxLines="1"
+        android:textColor="@color/neutral_2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/fltvViolateAdd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Tên sách: Lập trình Android" />
+
+    <TextView
+        android:id="@+id/tvViolateAuthor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/fbase_font_regular"
+        android:maxLines="1"
+        android:textColor="@color/neutral_2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/gltvViolateV7"
+        app:layout_constraintStart_toStartOf="@id/tvViolateName"
+        app:layout_constraintTop_toBottomOf="@id/tvViolateName"
+        tools:text="Tên tác giả: Lưu Văn Tùng" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gltvViolateV7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <TextView
+        android:id="@+id/tvViolateYear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/fbase_font_regular"
+        android:maxLines="1"
+        android:textColor="@color/neutral_2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/gltvViolateV7"
+        app:layout_constraintStart_toStartOf="@id/tvViolateAuthor"
+        app:layout_constraintTop_toBottomOf="@id/tvViolateAuthor"
+        tools:text="Năm sản xuất: 2019" />
+
+    <TextView
+        android:id="@+id/tvViolateCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/fbase_font_regular"
+        android:maxLines="1"
+        android:textColor="@color/neutral_2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/gltvViolateV7"
+        app:layout_constraintStart_toStartOf="@id/tvViolateAuthor"
+        app:layout_constraintTop_toBottomOf="@id/tvViolateYear"
+        tools:text="Số lượng: 10" />
+
+    <TextView
+        android:id="@+id/tvViolateReason"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="10dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/fbase_font_regular"
+        android:maxLines="1"
+        android:textColor="@color/neutral_2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/gltvViolateV7"
+        app:layout_constraintStart_toStartOf="@id/tvViolateAuthor"
+        app:layout_constraintTop_toBottomOf="@id/tvViolateCount"
+        tools:text="Quá thời gian: 2 ngày" />
+
+    <TextView
+        android:id="@+id/tvViolateTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="10dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/fbase_font_regular"
+        android:maxLines="1"
+        android:textColor="@color/neutral_2"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/gltvViolateV7"
+        app:layout_constraintStart_toStartOf="@id/tvViolateReason"
+        app:layout_constraintTop_toBottomOf="@id/tvViolateReason"
+        tools:text="Lần thứ: 2" />
+
+
+    <FrameLayout
+        android:id="@+id/fltvViolateAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackground"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_give_up" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

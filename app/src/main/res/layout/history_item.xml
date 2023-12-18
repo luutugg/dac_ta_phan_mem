@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/shape_bg_white_corner_8">
+
+    <TextView
+        android:id="@+id/tvHistoryName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/fbase_font_regular"
+        android:maxLines="1"
+        android:textColor="@color/neutral_2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Tên sinh viên: Lưu Văn Tùng" />
+
+    <TextView
+        android:id="@+id/tvHistoryPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ellipsize="end"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/fbase_font_regular"
+        android:maxLines="1"
+        android:textColor="@color/neutral_2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHistoryName"
+        tools:text="Số điện thoại: 0364572864" />
+
+    <TextView
+        android:id="@+id/tvHistoryBookName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/fbase_font_regular"
+        android:maxLines="1"
+        android:textColor="@color/neutral_2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvHistoryPhone"
+        app:layout_constraintTop_toBottomOf="@id/tvHistoryPhone"
+        tools:text="Tên sách: Lập trình Android" />
+
+    <TextView
+        android:id="@+id/tvHistoryBookCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/fbase_font_regular"
+        android:maxLines="1"
+        android:textColor="@color/neutral_2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvHistoryBookName"
+        app:layout_constraintTop_toBottomOf="@id/tvHistoryBookName"
+        tools:text="Số lượng: 2" />
+
+    <TextView
+        android:id="@+id/tvHistoryState"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/fbase_font_regular"
+        android:maxLines="1"
+        android:textColor="@color/neutral_2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvHistoryBookCount"
+        app:layout_constraintTop_toBottomOf="@id/tvHistoryBookCount"
+        tools:text="Trạng thái: Mượn" />
+
+    <TextView
+        android:id="@+id/tvHistoryDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="10dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/fbase_font_regular"
+        android:maxLines="1"
+        android:textColor="@color/neutral_2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvHistoryState"
+        app:layout_constraintTop_toBottomOf="@id/tvHistoryState"
+        tools:text="Ngày: 17/12/2023" />
+
+    <TextView
+        android:id="@+id/tvHistoryTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="10dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/fbase_font_regular"
+        android:maxLines="1"
+        android:textColor="@color/neutral_2"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvHistoryDate"
+        app:layout_constraintTop_toBottomOf="@id/tvHistoryDate"
+        tools:text="Lần thứ: 1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

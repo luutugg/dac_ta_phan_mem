@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".presentation.signup.SignUpActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/fbase_font_bold"
+        android:gravity="center"
+        android:text="@string/sign_up_title"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray_light">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:fontFamily="@font/fbase_font_bold"
+            android:gravity="center"
+            android:text="@string/title_name"
+            android:textColor="@color/brand_color"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtSignUpUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_bg_gray_corner_4"
+            android:fontFamily="@font/fbase_font_medium"
+            android:hint="@string/user_name_title"
+            android:padding="10dp"
+            android:maxLength="100"
+            android:maxLines="1"
+            android:textColor="@color/black68"
+            android:textColorHint="@color/black68"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtSignUpUserPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_bg_gray_corner_4"
+            android:fontFamily="@font/fbase_font_medium"
+            android:hint="@string/password_title"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="10dp"
+            android:textColor="@color/black68"
+            android:textColorHint="@color/black68"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtSignUpConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_bg_gray_corner_4"
+            android:fontFamily="@font/fbase_font_medium"
+            android:hint="@string/confirm_password_title"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="10dp"
+            android:textColor="@color/black68"
+            android:textColorHint="@color/black68"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtSignUpUserPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_bg_gray_corner_4"
+            android:fontFamily="@font/fbase_font_medium"
+            android:hint="@string/phone_number_title"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:inputType="number"
+            android:textColor="@color/black68"
+            android:textColorHint="@color/black68"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtSignUpUserGrade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_bg_gray_corner_4"
+            android:fontFamily="@font/fbase_font_medium"
+            android:hint="@string/grade_title"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:maxLength="50"
+            android:textColor="@color/black68"
+            android:textColorHint="@color/black68"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvSignUpHaveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?selectableItemBackground"
+            android:gravity="end"
+            android:padding="10dp"
+            android:fontFamily="@font/fbase_font_regular"
+            android:textSize="12sp"
+            android:text="@string/title_have_account"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_bg_blue_corner_8"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center"
+            android:paddingHorizontal="50dp"
+            android:paddingVertical="8dp"
+            android:text="@string/sign_up_title_vi"
+            android:textColor="@color/white" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
