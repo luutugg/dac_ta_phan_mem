@@ -8,7 +8,7 @@ data class History(
     @PrimaryKey
     var historyId: String,
 
-    var userId: String? = null,
+    var userId: String,
 
     var userName: String? = null,
 

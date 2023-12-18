@@ -42,7 +42,7 @@ class BorrowViewModel : ViewModel() {
                     myBookCount = count + oldCount,
                     myBookYear = book.bookYear,
                     myBookAuthor = book.bookAuthor,
-                    myBookDateGiveBack = TimeUtils.convertTimeDactaToDDMMYY(Calendar.getInstance().time),
+                    myBookDateGiveBack = "28/12/2023",
                     userInfoBookId = AppPreferences.userInfo!!.userId,
                     myBookNumberOder = time
                 )

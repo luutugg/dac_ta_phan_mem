@@ -76,33 +76,6 @@ object MockDatabase {
                     bookYear = "2012"
                 )
             )
-            insertBook(
-                Book(
-                    bookId = UUID.randomUUID().toString(),
-                    bookName = " Quẳng gánh lo đi và vui sống",
-                    bookAuthor = "Lưu Thế Minh",
-                    bookCount = 4,
-                    bookYear = "2016"
-                )
-            )
-            insertBook(
-                Book(
-                    bookId = UUID.randomUUID().toString(),
-                    bookName = "Lập trình C++",
-                    bookAuthor = "Phạm Ngọc Mỹ",
-                    bookCount = 2,
-                    bookYear = "2018"
-                )
-            )
-            insertBook(
-                Book(
-                    bookId = UUID.randomUUID().toString(),
-                    bookName = "Đọc Vị Bất Kỳ Ai ",
-                    bookAuthor = "Lưu Văn Tùng",
-                    bookCount = 6,
-                    bookYear = "2007"
-                )
-            )
         }
     }
 

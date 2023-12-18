@@ -23,5 +23,5 @@ data class MyBook (
 
     var myBookNumberOder: Int? = null,
 
-    var userInfoBookId: String? = null
+    var userInfoBookId: String
 ) : Parcelable
